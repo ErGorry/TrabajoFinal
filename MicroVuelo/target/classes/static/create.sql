@@ -1,0 +1,13 @@
+DROP SCHEMA IF EXISTS vuelos;
+CREATE SCHEMA vuelos;
+DROP TABLE IF EXISTS vuelos.vuelo;
+CREATE TABLE vuelos.vuelo (id_vuelo INT NOT NULL AUTO_INCREMENT, empresa VARCHAR(255), fecha_vuelo DATE ,precio DOUBLE,plazas_disponibles INT, PRIMARY KEY(id_vuelo));
+INSERT INTO vuelos.vuelo (empresa,fecha_vuelo,precio,plazas_disponibles) VALUES ('Ryanair','2024-07-25',657.3,30);
+INSERT INTO vuelos.vuelo (empresa,fecha_vuelo,precio,plazas_disponibles) VALUES ('Ryanair','2024-08-15',780,15);
+INSERT INTO vuelos.vuelo (empresa,fecha_vuelo,precio,plazas_disponibles) VALUES ('Ryanair','2024-09-30',550,45);
+INSERT INTO vuelos.vuelo (empresa,fecha_vuelo,precio,plazas_disponibles) VALUES ('Iberia','2024-07-20',823.7,60);
+INSERT INTO vuelos.vuelo (empresa,fecha_vuelo,precio,plazas_disponibles) VALUES ('Iberia','2024-08-10',1049.95,30);
+INSERT INTO vuelos.vuelo (empresa,fecha_vuelo,precio,plazas_disponibles) VALUES ('Iberia','2024-09-25',623.25,90);
+INSERT INTO vuelos.vuelo (empresa,fecha_vuelo,precio,plazas_disponibles) VALUES ('American Airlines','2024-07-30',952.5,35);
+INSERT INTO vuelos.vuelo (empresa,fecha_vuelo,precio,plazas_disponibles) VALUES ('American Airlines','2024-08-20',1180.35,20);
+INSERT INTO vuelos.vuelo (empresa,fecha_vuelo,precio,plazas_disponibles) VALUES ('American Airlines','2024-09-20',796.1,60);
