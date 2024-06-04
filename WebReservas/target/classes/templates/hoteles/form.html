@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Vuelos</title>
+<link rel="stylesheet" type="text/css" href="static/estilos/estilo.css">
+</head>
+<body>
+
+	<header class="encabezado">
+		<h1>Web de reservas de viajes a Menorca</h1>
+		<nav class="menu">
+			<ul>
+				<li><a href="/inicio">Inicio</a></li>
+				<li><a href="/reservas">Reservas</a></li>
+				<li><a href="/vuelos">Vuelos</a></li>
+				<li><a href="/hoteles">Hoteles</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<form action="/hoteles/nuevoHotel" method="post"
+				modelAttribute="hotel">
+				<div>
+					<label for="nombre">Nombre:</label><input type="text" name="nombre">
+				</div>
+				<div>
+					<label for="categoria">Categoria del hotel:</label><input
+						type="text" name="categoria">
+				</div>
+				<div>
+					<label for="disponible">Disponible:</label> <select name="disponible">
+						<option value="true">Si</option>
+						<option value="false">No</option>
+					</select>
+				</div>
+				<div>
+					<label for="precio">Precio de la habitacion por persona:</label><input
+						type="text" name="precio">
+				</div>
+				<button type="submit">Crear</button>
+			</form>
+		</section>
+	</main>
+	<footer>
+		<ul>
+			<li>Web creada para ser el proyecto final del Master Java con
+				Isabel A.</li>
+			<li>Autor: Alvaro Babarro</li>
+			<li>Github: <a href="https://github.com/ErGorry/Master_Java">Master
+					JAVA</a></li>
+		</ul>
+	</footer>
+</body>
+</html>
