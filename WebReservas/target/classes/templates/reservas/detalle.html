@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Vuelos</title>
-<link rel="stylesheet" type="text/css" href="static/estilos/estilo.css">
+<link rel="stylesheet" type="text/css" href="/estilos/estilos.css">
 </head>
 <body>
 
@@ -38,8 +38,8 @@
 		<li th:text="${vuelo.fechaVuelo}"></li>
 		<li th:text="${vuelo.precio + ' €'}"></li>
 		</ul>
-		<button><a href="reservas/list">Lista de reservas</a></button>
-		<button><a href="reservas/create">Crear una nueva reserva</a></button>
+		<button><a href="/reservas/list">Lista de reservas</a></button>
+		<button><a href="/reservas/create">Crear una nueva reserva</a></button>
 		</section>
 	</main>
 	<footer>

@@ -13,11 +13,18 @@ import org.springframework.web.client.RestTemplate;
 
 import com.curso.model.Vuelo;
 
+/**
+ * Vistas del REST de vuelos
+ * 
+ * @author Admin
+ *
+ */
 @Controller
 public class VistaVuelosController {
 
 	@Autowired
 	RestTemplate template;
+	// Ruta del REST de vuelos
 	private static final String URL_VUELOS = "http://localhost:8000/vuelos";
 
 	@GetMapping("/vuelos")

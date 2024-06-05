@@ -12,13 +12,17 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.client.RestTemplate;
 
 import com.curso.model.Hotel;
-
+/**
+ * Vistas de REST hoteles
+ * @author Admin
+ *
+ */
 @Controller
 public class VistaHotelesController {
 
 	@Autowired
 	RestTemplate template;
-
+	// Ruta del REST de hoteles
 	private static final String URL_HOTELES = "http://localhost:7000/hoteles";
 
 	@GetMapping("/hoteles")

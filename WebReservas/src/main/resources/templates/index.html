@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Web de reservas</title>
-<link rel="stylesheet" type="text/css" href="static/estilos/estilo.css">
+<link rel="stylesheet" type="text/css" href="/estilos/estilos.css">
 </head>
 <body>
 
@@ -24,9 +24,29 @@
 			<p>El objetivo de esta web es ofrecer una interfaz visual que
 				conecte los tres microservicios del proyecto final del curso Master
 				de Java de 160h.</p>
+			<p>Me he centrado especialmente en la funcionalidad REST dejando
+				de lado la ambientacion y el front de este portal</p>
+			<p>El proyecto consiste de 3 microservicios que controlan tres
+				entidades diferentes en BBDD aisladas unas de las otras. Lo que
+				complica la transaccionalidad, esta ha sido mi manera de abordar el
+				reto:</p>
+			<p>Tres Entidades con sus CRUD completos con metodos extra para
+				que puedan tener interaccion entre ellos:</p>
+			<ul>
+				<li>Hotel: int idHotel, String nombre, String categoria, double
+					precio, boolean disponible</li>
+				<li>Vuelo: int idVuelo, String empresa, LocalDate fechaVuelo,
+					Double precio, int plazasDisponibles</li>
+				<li>Reserva: int idReserva, String nombreCliente, String dni,
+					int numeroPersonas, int idVuelo, int idHotel</li>
+			</ul>
+			<p>Reserva es dependiente de las otras entidades y al crear una reservas.</p>
+			<p>Los microservicios se levantan en diferentes puertos y deben
+				estar activos.</p>
 			<p>Deseo implementar tres pestañas: Reservas, Vuelos, Hoteles.
-				Que muestren toda la informacion de cada microservicio creando una
-				capa de abstraccion del acceso a datos.</p>
+				Con una lista y un formulario. Que muestren toda la informacion
+				necesaria de cada microservicio creando una capa de abstraccion del
+				acceso a datos.</p>
 		</section>
 	</main>
 	<footer>
@@ -34,8 +54,8 @@
 			<li>Web creada para ser el proyecto final del Master Java con
 				Isabel A.</li>
 			<li>Autor: Alvaro Babarro</li>
-			<li>Github: <a href="https://github.com/ErGorry/Master_Java">Master
-					JAVA</a></li>
+			<li>Github: <a href="https://github.com/ErGorry">Master
+					JAVA, Proyecto final y otros</a></li>
 		</ul>
 	</footer>
 </body>

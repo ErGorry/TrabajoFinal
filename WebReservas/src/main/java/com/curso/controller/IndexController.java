@@ -2,7 +2,11 @@ package com.curso.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
+/**
+ * Pagina de inicio
+ * @author Admin
+ *
+ */
 @Controller
 public class IndexController {
 

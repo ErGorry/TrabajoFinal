@@ -20,20 +20,37 @@
 	</header>
 	<main>
 		<section>
-			<form action="/reservas/nuevaReserva" method="post"
-				modelAttribute="pedidoReserva">
-				<div>
+			<form action="/reservas/nuevaReserva/reservar" method="post"
+				modelAttribute="reserva">
+				<div hidden>
 					<label for="nombreCliente">Nombre cliente:</label><input
-						type="text" name="nombreCliente" required>
+						type="text" name="nombreCliente"
+						th:value="${pedidoReserva.nombreCliente}">
 				</div>
-				<div>
+				<div hidden>
 					<label for="dni">DNI Cliente:</label><input type="text" name="dni"
-						required>
+						th:value="${pedidoReserva.dni}">
+				</div>
+				<div hidden>
+					<label for="numeroPersonas">Numero de presonas:</label><input
+						type="text" name="numeroPersonas"
+						th:value="${pedidoReserva.numeroPersonas}">
 				</div>
 				<div>
-					<label for="numeroPersonas">Numero de presonas:</label><input
-						type="text" name="numeroPersonas" required>
+					<label for="idHotel">Hotel:</label><select required
+						name="idHotel">
+						<option th:each="hotel : ${hotelesDisponibles}"
+							th:value="${hotel.idHotel}" th:text="${hotel.nombre} + ' ' + ${hotel.categoria}"></option>
+					</select>
 				</div>
+				<div>
+					<label for="idVuelo">Vuelo:</label><select required
+						name="idVuelo">
+						<option th:each="vuelo: ${vuelosDisponibles}"
+							th:value="${vuelo.idVuelo}" th:text="${vuelo.empresa + ' ' + vuelo.fechaVuelo}"></option>
+					</select>
+				</div>
+
 				<button type="submit">Crear</button>
 			</form>
 		</section>

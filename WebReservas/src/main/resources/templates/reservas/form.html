@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Vuelos</title>
-<link rel="stylesheet" type="text/css" href="static/estilos/estilo.css">
+<link rel="stylesheet" type="text/css" href="/estilos/estilos.css">
 </head>
 <body>
 
@@ -21,23 +21,18 @@
 	<main>
 		<section>
 			<form action="/reservas/nuevaReserva" method="post"
-				modelAttribute="reserva">
+				modelAttribute="pedidoReserva">
 				<div>
-					<label for="nombreCliente">Nombre cliente:</label><input type="text" name="nombreCliente">
+					<label for="nombreCliente">Nombre cliente:</label><input
+						type="text" name="nombreCliente" required>
 				</div>
 				<div>
-					<label for="dni">DNI Cliente:</label><input
-						type="text" name="dni">
-				</div>
-				<div>
-					<label for="disponible">Disponible:</label> <select name="disponible">
-						<option value="true">Si</option>
-						<option value="false">No</option>
-					</select>
+					<label for="dni">DNI Cliente:</label><input type="text" name="dni"
+						required>
 				</div>
 				<div>
 					<label for="numeroPersonas">Numero de presonas:</label><input
-						type="text" name="numeroPersonas">
+						type="text" name="numeroPersonas" required>
 				</div>
 				<button type="submit">Crear</button>
 			</form>
