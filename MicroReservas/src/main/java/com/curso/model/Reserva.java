@@ -133,4 +133,10 @@ public class Reserva {
 		return Objects.equals(idReserva, other.idReserva);
 	}
 
+	@Override
+	public String toString() {
+		return "Reserva [idReserva=" + idReserva + ", nombreCliente=" + nombreCliente + ", dni=" + dni
+				+ ", numeroPersonas=" + numeroPersonas + ", idVuelo=" + idVuelo + ", idHotel=" + idHotel + "]";
+	}
+
 }

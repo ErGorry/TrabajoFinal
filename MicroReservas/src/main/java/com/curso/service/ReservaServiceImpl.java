@@ -51,6 +51,7 @@ public class ReservaServiceImpl implements ReservaService {
 	@Override
 	public void crear(Reserva reserva) {
 		boolean vueloDisponible = false;
+		System.out.println(reserva);
 		List<Vuelo> listaVuelos = Arrays.asList(
 				template.getForObject(URL_VUELO + "/disponibles/" + reserva.getNumeroPersonas(), Vuelo[].class));
 		for (Vuelo vuelo : listaVuelos) {

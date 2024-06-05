@@ -13,6 +13,11 @@ import com.curso.model.Reserva;
  *
  */
 public interface ReservaDao extends JpaRepository<Reserva, Integer> {
-
+	/**
+	 * Busca las reservas con ese id de hotel
+	 * 
+	 * @param idHotel Id del hotel
+	 * @return lista de reservas
+	 */
 	List<Reserva> findByIdHotel(int idHotel);
 }
