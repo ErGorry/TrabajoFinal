@@ -6,6 +6,7 @@ El objetivo consistía en crear 3 microservicios independientes pero conectados 
 * Microservicio Hotel: disponiblidad, nombre, tipo, precio.
 * Microservicio Vuelo: empresa, fecha, precio, plazas.
 * Microservicio Reservas: nombre, dni, personas, hotel, vuelo.
+
 La funcionalidad principal debía de ser la de las peticiones HTTP implementadas, aunque vi necesario generar una interfaz gráfica que aportase información al usuario.
 
 
