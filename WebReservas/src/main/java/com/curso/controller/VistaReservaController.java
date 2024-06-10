@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.client.RestTemplate;
 
 import com.curso.model.Hotel;
@@ -43,6 +45,14 @@ public class VistaReservaController {
 	@GetMapping("/reservas/list")
 	public String reservasLista(Model model) {
 		List<Reserva> listaReservas = Arrays.asList(template.getForObject(URL_RESERVAS, Reserva[].class));
+		model.addAttribute("listaReservas", listaReservas);
+		return "reservas/list";
+	}
+
+	@GetMapping("/reservas/hotel")
+	public String reservasListaHotel(@RequestParam(name = "hotel") String hotel, Model model) {
+		List<Reserva> listaReservas = Arrays
+				.asList(template.getForObject(URL_RESERVAS + "/hotel/" + hotel, Reserva[].class));
 		model.addAttribute("listaReservas", listaReservas);
 		return "reservas/list";
 	}

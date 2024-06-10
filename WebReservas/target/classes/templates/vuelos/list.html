@@ -20,6 +20,8 @@
 	</header>
 	<main>
 		<section>
+		<div class="playa">
+			<div class="content">
 			<table>
 				<thead>
 					<tr>
@@ -36,11 +38,13 @@
 						<td th:text="${vuelo.empresa}"></td>
 						<td th:text="${vuelo.fechaVuelo}"></td>
 						<td th:text="${vuelo.plazasDisponibles}"></td>
-						<td th:text="${vuelo.precio}+ €"></td>
+						<td th:text="${vuelo.precio + '€'}"></td>
 
 					</tr>
 				</tbody>
 			</table>
+			</div>
+			</div>
 		</section>
 	</main>
 	<footer>

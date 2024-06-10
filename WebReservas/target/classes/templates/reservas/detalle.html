@@ -20,26 +20,34 @@
 	</header>
 	<main>
 		<section>
-		<h1>Detalle de tu reserva:</h1>
-		<ul>
-		<li th:text="${reserva.nombreCliente}"></li>
-		<li th:text="${reserva.dni}"></li>
-		<li th:text="${reserva.numeroPersonas + ' personas'}"></li>
-		</ul>
-		<h2>Hotel:</h2>
-		<ul>
-		<li th:text="${hotel.nombre}"></li>
-		<li th:text="${hotel.categoria}"></li>
-		<li th:text="${hotel.precio + ' €'}"></li>
-		</ul>
-		<h2>Avion:</h2>
-		<ul>
-		<li th:text="${vuelo.empresa}"></li>
-		<li th:text="${vuelo.fechaVuelo}"></li>
-		<li th:text="${vuelo.precio + ' €'}"></li>
-		</ul>
-		<button><a href="/reservas/list">Lista de reservas</a></button>
-		<button><a href="/reservas/create">Crear una nueva reserva</a></button>
+			<div class="playa">
+				<div class="content">
+					<h1>Detalle de tu reserva:</h1>
+					<ul>
+						<li th:text="${reserva.nombreCliente}"></li>
+						<li th:text="${reserva.dni}"></li>
+						<li th:text="${reserva.numeroPersonas + ' personas'}"></li>
+					</ul>
+					<h2>Hotel:</h2>
+					<ul>
+						<li th:text="${hotel.nombre}"></li>
+						<li th:text="${hotel.categoria}"></li>
+						<li th:text="${hotel.precio + ' €'}"></li>
+					</ul>
+					<h2>Avion:</h2>
+					<ul>
+						<li th:text="${vuelo.empresa}"></li>
+						<li th:text="${vuelo.fechaVuelo}"></li>
+						<li th:text="${vuelo.precio + ' €'}"></li>
+					</ul>
+					<button>
+						<a href="/reservas/list">Lista de reservas</a>
+					</button>
+					<button>
+						<a href="/reservas/create">Crear una nueva reserva</a>
+					</button>
+				</div>
+			</div>
 		</section>
 	</main>
 	<footer>

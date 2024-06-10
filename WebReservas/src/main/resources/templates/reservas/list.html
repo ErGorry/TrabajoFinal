@@ -20,30 +20,34 @@
 	</header>
 	<main>
 		<section>
-			<table>
-				<thead>
-					<tr>
-						<th>ID RESERVA</th>
-						<th>NOMBRE CLIENTE</th>
-						<th>DNI</th>
-						<th>ID HOTEL</th>
-						<th>ID VUELO</th>
-						<th>NUMERO PERSONAS</th>
-						<th>DETALLE</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr th:each="reserva : ${listaReservas}">
-						<td th:text="${reserva.idReserva}"></td>
-						<td th:text="${reserva.nombreCliente}"></td>
-						<td th:text="${reserva.dni}"></td>
-						<td th:text="${reserva.idHotel}"></td>
-						<td th:text="${reserva.idVuelo}"></td>
-						<td th:text="${reserva.numeroPersonas}"></td>
-						<td><a th:href="@{/reservas/{id}(id=${reserva.idReserva})}">Detalle</a></td>
-					</tr>
-				</tbody>
-			</table>
+			<div class="playa">
+				<div class="content">
+					<table>
+						<thead>
+							<tr>
+								<th>ID RESERVA</th>
+								<th>NOMBRE CLIENTE</th>
+								<th>DNI</th>
+								<th>ID HOTEL</th>
+								<th>ID VUELO</th>
+								<th>NUMERO PERSONAS</th>
+								<th>DETALLE</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="reserva : ${listaReservas}">
+								<td th:text="${reserva.idReserva}"></td>
+								<td th:text="${reserva.nombreCliente}"></td>
+								<td th:text="${reserva.dni}"></td>
+								<td th:text="${reserva.idHotel}"></td>
+								<td th:text="${reserva.idVuelo}"></td>
+								<td th:text="${reserva.numeroPersonas}"></td>
+								<td><a th:href="@{/reservas/{id}(id=${reserva.idReserva})}">Detalle</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</section>
 	</main>
 	<footer>

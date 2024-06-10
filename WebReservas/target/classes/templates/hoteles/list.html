@@ -20,6 +20,8 @@
 	</header>
 	<main>
 		<section>
+		<div class="playa">
+			<div class="content">
 			<table>
 				<thead>
 					<tr>
@@ -36,11 +38,13 @@
 						<td th:text="${hotel.nombre}"></td>
 						<td th:text="${hotel.categoria}"></td>
 						<td th:text="${hotel.disponible}"></td>
-						<td th:text="${hotel.precio}+ €"></td>
+						<td th:text="${hotel.precio + '€'}"></td>
 						
 					</tr>
 				</tbody>
 			</table>
+			</div>
+			</div>
 		</section>
 	</main>
 	<footer>
